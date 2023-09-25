@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Dashboard</title>
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .header {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .search-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-box {
+            width: 400px;
+            padding: 15px;
+            border: 2px solid #4285f4;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #3579db;
+        }
+        .news-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .news-heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .news-item {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .pie-chart-container {
+            margin: 20px auto;
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Government of India News Feedback System</h1>
+        <p>360-degree feedback software for the Government of India related News Stories in Regional Media using Artificial Intelligence / Machine Learning</p>
+    </div>
+    <div class="search-container">
+        <form action="/search" method="post">
+        <input type="text" class="search-box" placeholder="Search..." name="policy">
+        <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+    <div class="news-box">
+        <h2 class="news-heading">Trending News</h2>
+        <div class="news-item">News 1: Is govt gearing up to notify CAA rules?</div>
+        <div class="news-item">News 2: Back Govt may buy tomatoes to help farmers as prices fall</div>
+        <div class="news-item">News 3: CPI report August 2023: Inflation rose 0.3%</div>
+        
+    </div>
+    <div class="pie-chart-container">
+        <canvas id="pie-chart"></canvas>
+    </div>
+    <script>
+        // data for the pie chart
+        var data = {
+            labels: ["Good", "Bad", "Neutral"],
+            datasets: [{
+                data: [60, 70, 80], // input percentage CHANGE VALUES ACCORDINGLY
+                backgroundColor: ["#5cb85c", "#d9534f", "#f0ad4e"], // Good, Bad, Neutral colours
+            }],
+        };
+
+        var options = {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    fontColor: '#333',
+                },
+            },
+        };
+
+        //pie chart
+        var ctx = document.getElementById('pie-chart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options,
+        });
+    </script>
+</body>
+</html>
