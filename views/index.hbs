@@ -2,106 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Dashboard</title>
-    <!-- Chart.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .header {
-            background-color: #4285f4;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        .search-container {
-            margin: 20px auto;
-            text-align: center;
-        }
-        .search-box {
-            width: 400px;
-            padding: 15px;
-            border: 2px solid #4285f4;
-            border-radius: 30px;
-            font-size: 16px;
-            outline: none;
-        }
-        .search-button {
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            padding: 15px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .search-button:hover {
-            background-color: #3579db;
-        }
-        .news-box {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin: 20px auto;
-            padding: 20px;
-            width: 80%;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        .news-heading {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .news-item {
-            margin-bottom: 10px;
-            color: #555;
-        }
-        .pie-chart-container {
-            margin: 20px auto;
-            width: 300px;
-            height: 300px;
-            background-color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Government of India News Feedback System</h1>
-        <p>360-degree feedback software for the Government of India related News Stories in Regional Media using Artificial Intelligence / Machine Learning</p>
-    </div>
-    <div class="search-container">
-        <form action="/search" method="post">
-        <input type="text" class="search-box" placeholder="Search..." name="policy">
-        <button type="submit" class="search-button">Search</button>
-        </form>
-    </div>
-    <div class="news-box">
-        <h2 class="news-heading">Trending News</h2>
-        <div class="news-item">News 1: Is govt gearing up to notify CAA rules?</div>
-        <div class="news-item">News 2: Back Govt may buy tomatoes to help farmers as prices fall</div>
-        <div class="news-item">News 3: CPI report August 2023: Inflation rose 0.3%</div>
-        
-    </div>
-    <div class="pie-chart-container">
-        <canvas id="pie-chart"></canvas>
-    </div>
+    <title>VETARA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-        // data for the pie chart
         var data = {
             labels: ["Good", "Bad", "Neutral"],
             datasets: [{
@@ -120,7 +25,6 @@
             },
         };
 
-        //pie chart
         var ctx = document.getElementById('pie-chart').getContext('2d');
         var myPieChart = new Chart(ctx, {
             type: 'pie',
@@ -128,5 +32,141 @@
             options: options,
         });
     </script>
+</head>
+<body div class = "body">
+    <div class = "box">
+        <div class="pib">
+        </div>
+        <div class = "logo">
+        </div>
+        <div class = "name">
+            <h1 style="font-family: name; font-size: 300%;margin-left: 11%;"> VETARA </h1>
+            <p style="font-size: 150%; margin-top: -5%;font-family: byline;">A 360 Degree Feedback System For PIB</p>
+        </div>
+        <div class="nav">
+            <ul class="n">
+                <li a ref="#" style="font-size: 110%">News</li>
+                <li a ref="#">Ministry</li>
+                <li a ref="#">Language</li>
+                <li a ref="#">About</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="search-container">
+                <form action="/search" method="post">
+                <input type="text" class="search-box" placeholder="Search..." name="policy">
+                <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+            <div class="pie-chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+        </div>
+        <div class="news">
+            <p class="newsnav" style="font-size: 150%;">News</p>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <div class="button-matrix1">
+                    <button class="nButton">Button 1</button>
+                    <button class="nButton">Button 3</button>
+                    <button class="nButton">Button 5</button>
+                    <button class="nButton">Button 7</button>
+                    <button class="nButton">Button 9</button>
+                </div> 
+                <div class="button-matrix2">
+                    <button class="nButton">Button 2</button>
+                    <button class="nButton">Button 4</button>
+                    <button class="nButton">Button 6</button>
+                    <button class="nButton">Button 8</button>
+                    <button class="nButton">Button 10</button>
+                </div>                               
+            </div>
+        </div>
+        <div style="margin: 30%"></div>
+        <div class="ministry">
+            <p class="minnav" style="font-size: 150%;">Ministry</p>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <div class="button-matrix1m">
+                    <button class="mButton">Ministry of Home Affairs</button>
+                    <button class="mButton">Ministry of Finance</button>
+                    <button class="mButton">Ministry of External Affairs</button>
+                    <button class="mButton">Ministry of Defence</button>
+                    <button class="mButton">Ministry of Human Resource Developmen</button>
+                    <button class="mButton">Ministry of Health and Family Welfare</button>
+                    <button class="mButton">Ministry of Railways</button>
+                    <button class="mButton">Ministry of Agriculture and Farmers Welfare</button>
+                    <button class="mButton">Ministry of Commerce and Industry</button>
+                    <button class="mButton">Ministry of Rural Development</button>
+                    <button class="mButton">Ministry of Women and Child Development</button>
+                    <button class="mButton">Ministry of Information and Broadcasting</button>
+                    <button class="mButton">Ministry of Electronics and Information Technology</button>
+                    <button class="mButton">Ministry of Environment, Forest and Climate Change</button>
+                    <button class="mButton">Ministry of Housing and Urban Affairs</button>
+                    <button class="mButton">Ministry of Labour and Employment</button>
+                    <button class="mButton">Ministry of Law and Justice</button>
+                    <button class="mButton">Ministry of Social Justice and Empowerment</button>
+                    <button class="mButton">Ministry of Skill Development and Entrepreneurship</button>
+                    <button class="mButton">Ministry of Food Processing Industries</button>
+                </div> 
+                <div class="button-matrix2m">
+                    <button class="mButton">Ministry of Road Transport and Highways</button>
+                    <button class="mButton">Ministry of Civil Aviation</button>
+                    <button class="mButton">Ministry of Petroleum and Natural Gas</button>
+                    <button class="mButton">Ministry of Power</button>
+                    <button class="mButton">Ministry of Mines</button>
+                    <button class="mButton">Ministry of Culture</button>
+                    <button class="mButton">Ministry of Science and Technology</button>
+                    <button class="mButton">Ministry of Earth Sciences</button>
+                    <button class="mButton">Ministry of AYUSH</button>
+                    <button class="mButton">Ministry of Youth Affairs and Sports</button>
+                    <button class="mButton">Ministry of Heavy Industries and Public Enterprises</button>
+                    <button class="mButton">Ministry of Jal Shakti (Water Resources)</button>
+                    <button class="mButton">Ministry of Panchayati Raj</button>
+                    <button class="mButton">Ministry of Tribal Affairs</button>
+                    <button class="mButton">Ministry of Shipping</button>
+                    <button class="mButton">Ministry of Textiles</button>
+                    <button class="mButton">Ministry of Tourism</button>
+                    <button class="mButton">Ministry of Minority Affairs</button>
+                    <button class="mButton">Ministry of Minority Affairs</button>
+                    <button class="mButton">Ministry of Fisheries, Animal Husbandry, and Dairying</button>
+                </div>                               
+            </div>
+        </div> 
+        <div style="margin: 60%"></div>
+        <div class="language">
+            <p class="minlang" style="font-size: 150%;">Language</p>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <div class="button-matrix1l">
+                    <button class="lButton">Punjabi</button>
+                    <button class="lButton">Gujarati</button>
+                    <button class="lButton">Marathi</button>
+                    <button class="lButton">Telugu</button>
+                    <button class="lButton">Kannada</button>
+                    <button class="lButton">Manipuri</button>
+                </div> 
+                <div class="button-matrix2l">
+                    <button class="lButton">Malyalam</button>
+                    <button class="lButton">Tamil</button>
+                    <button class="lButton">Odia</button>
+                    <button class="lButton">Bengali</button>
+                    <button class="lButton">Assamese</button>
+                </div>                               
+            </div>
+        </div>
+        <div style="margin: 38%"></div>
+        <div class="language">
+            <p class="minlang" style="font-size: 150%;">About</p>
+        </div>
+        <div class="team">
+            <div class="bound">
+                <p style="font-size: 150%">VETARA</p>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
